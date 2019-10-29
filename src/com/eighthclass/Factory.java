@@ -1,6 +1,7 @@
 package com.eighthclass;
 
 public abstract class Factory {
+	@SuppressWarnings("deprecation")
 	public static Factory getFactory(String classname) throws Exception, ClassNotFoundException {
 		Factory factory = null;
 		factory = (Factory) Class.forName(classname).newInstance();
